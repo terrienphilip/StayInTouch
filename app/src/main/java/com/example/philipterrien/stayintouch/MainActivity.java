@@ -1,5 +1,6 @@
 package com.example.philipterrien.stayintouch;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -16,7 +17,8 @@ public class MainActivity extends AppCompatActivity {
         addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent startIntent = new Intent(getApplicationContext(), AddContact.class);
+                startActivity(startIntent);
             }
         });
     }
