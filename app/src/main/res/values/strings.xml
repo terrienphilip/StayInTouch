@@ -8,7 +8,9 @@
     <string name="no_contacts">You have no contacts to stay in touch with :)</string>
     <string name="name">Name:</string>
     <string name="address">Address:</string>
-    <string name="name_hint">(Bob)</string>
+    <string name="name_hint">Enter Contact\'s Name (Required)</string>
+    <string name="address_hint">Enter Contact\'s Address</string>
+    <string name="note_hint">Enter Notes About Contact</string>
     <string name="note">Notes:</string>
     <string name="save_contact">Save</string>
 </resources>
