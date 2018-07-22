@@ -12,5 +12,6 @@
     <string name="address_hint">Enter Contact\'s Address</string>
     <string name="note_hint">Enter Notes About Contact</string>
     <string name="note">Notes:</string>
+    <string name="no_name_save">You cannot save a contact without a name.</string>
     <string name="save_contact">Save</string>
 </resources>

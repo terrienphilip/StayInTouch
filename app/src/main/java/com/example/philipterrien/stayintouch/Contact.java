@@ -15,9 +15,15 @@ public class Contact {
         queueRank = 0;
     }
 
-    public Contact(String name, String address) {
+    public Contact(String name, String address, boolean isAddress) {
         this.name = name;
-        this.address = address;
+
+        if (isAddress) {
+            this.address = address;
+        }
+        else {
+            this.notes = address;
+        }
         queueRank = 0;
     }
 
