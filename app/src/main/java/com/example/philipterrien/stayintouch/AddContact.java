@@ -31,12 +31,7 @@ public class AddContact extends AppCompatActivity {
                     return;
                 }
 
-                Intent backIntent = new Intent(getApplicationContext(), MainActivity.class);
-                backIntent.putExtra("nameInput", nameInput);
-                backIntent.putExtra("addressInput", addressInput);
-                backIntent.putExtra("notesInput", notesInput);
-                startActivity(backIntent);
-                finish();
+
             }
         });
     }

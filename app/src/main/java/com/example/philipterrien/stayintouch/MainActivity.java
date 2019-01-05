@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         contactList = new ArrayList<>();
 
         Button addBtn = findViewById(R.id.addContactBtn);
+
         addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -33,37 +34,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(startIntent);
             }
         });
-
-
-
     }
 
 
-        //MUST USE START ACTIVITY FOR RESULT
-        /*
-        String newName = getIntent().getStringExtra("nameInput");
-        String newAddress = getIntent().getStringExtra("addressInput");
-        String newNotes = getIntent().getStringExtra("notesInput");
-        boolean isAddress;
-
-        if (newAddress.equals("") && newNotes.equals("")) {
-            newContact = new Contact(newName);
-        }
-        else if (newAddress.equals("") && !newNotes.equals("")) {
-            isAddress = false;
-            newContact = new Contact(newName, newNotes, isAddress);
-        }
-        else if (!newAddress.equals("") && newNotes.equals("")) {
-            isAddress = true;
-            newContact = new Contact(newName, newNotes, isAddress);
-        }
-        else {
-            newContact = new Contact(newName, newAddress, newNotes);
-        }
-
-        contactList.add(newContact);
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(),contactListView)
-        */
 
 }

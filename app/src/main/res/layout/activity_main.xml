@@ -1,79 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal">
+    android:orientation="vertical">
 
-    <ListView
-        android:id="@+id/contactListView"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="382dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:layout_editor_absoluteX="-2dp" />
-
-    <Button
-        android:id="@+id/addContactBtn"
-        android:layout_width="111dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/add_contact"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="@android:color/background_dark"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/settingsBtn"
-        app:layout_constraintHorizontal_bias="0.85"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.050000012" />
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/helpBtn"
-        android:layout_width="111dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/help"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="@android:color/background_dark"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.16"
-        app:layout_constraintStart_toEndOf="@+id/settingsBtn"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.050000012" />
+        <Button
+            android:id="@+id/addContactBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:text="@string/add_contact"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@android:color/background_dark"
+            android:textSize="12sp" />
 
-    <Button
-        android:id="@+id/settingsBtn"
-        android:layout_width="111dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/settings"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="@android:color/background_dark"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.050000012" />
-</android.support.constraint.ConstraintLayout>
+        <Button
+            android:id="@+id/helpBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:text="@string/help"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@android:color/background_dark"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/settingsBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:text="@string/settings"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@android:color/background_dark"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/contactListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            tools:layout_editor_absoluteX="137dp" />
+    </ScrollView>
+
+</LinearLayout>
