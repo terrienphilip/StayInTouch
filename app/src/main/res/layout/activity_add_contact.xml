@@ -1,145 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.philipterrien.stayintouch.AddContact">
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/saveContactBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="444dp"
-        android:text="@string/save_contact"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.philipterrien.stayintouch.AddContact">
 
-    <EditText
-        android:id="@+id/nameEditText"
-        android:layout_width="218dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:fontFamily="sans-serif"
-        android:hint="@string/name_hint"
-        android:inputType="textPersonName"
-        android:singleLine="false"
-        android:textSize="14sp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/nameText"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        <ImageView
+            android:id="@+id/userImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_alignTop="@id/firstNameEditText"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="32dp"
+            android:src="@drawable/user"
+            android:textSize="24sp" />
 
-    <EditText
-        android:id="@+id/addressEditText"
-        android:layout_width="217dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="60dp"
-        android:ems="10"
-        android:fontFamily="sans-serif"
-        android:hint="@string/address_hint"
-        android:inputType="textMultiLine"
-        android:minLines="1"
-        android:maxLines="5"
-        android:gravity="top|left"
-        android:scrollbars="vertical"
-        android:scrollHorizontally="false"
-        android:singleLine="false"
-        android:textSize="14sp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/nameText"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        <EditText
+            android:id="@+id/firstNameEditText"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_toRightOf="@id/userImage"
+            android:ems="10"
+            android:fontFamily="sans-serif"
+            android:hint="@string/first_name_hint"
+            android:singleLine="false"
+            android:textSize="14sp"
+            android:visibility="visible" />
 
-    <EditText
-        android:id="@+id/notesEditText"
-        android:layout_width="276dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:fontFamily="sans-serif"
-        android:gravity="top|left"
-        android:hint="@string/note_hint"
-        android:inputType="textMultiLine"
-        android:maxLines="3"
-        android:minLines="1"
-        android:scrollHorizontally="false"
-        android:scrollbars="vertical"
-        android:singleLine="false"
-        android:textSize="14sp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/saveContactBtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.673"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/notesText"
-        app:layout_constraintVertical_bias="0.0" />
+        <EditText
+            android:id="@+id/lastNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/firstNameEditText"
+            android:layout_alignRight="@id/firstNameEditText"
+            android:layout_alignLeft="@id/firstNameEditText"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:fontFamily="sans-serif"
+            android:hint="@string/last_name_hint"
+            android:singleLine="false"
+            android:textSize="14sp"
+            android:visibility="visible" />
 
-    <TextView
-        android:id="@+id/nameText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/name"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.114"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        <ImageView
+            android:id="@+id/phoneImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_alignTop="@id/phoneEditText"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="32dp"
+            android:src="@drawable/phone"
+            android:textSize="24sp" />
 
-    <TextView
-        android:id="@+id/addressText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="60dp"
-        android:text="@string/address"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.04"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        <EditText
+            android:id="@+id/phoneEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lastNameEditText"
+            android:layout_alignRight="@id/firstNameEditText"
+            android:layout_alignLeft="@id/firstNameEditText"
+            android:layout_marginTop="48dp"
+            android:ems="10"
+            android:fontFamily="sans-serif"
+            android:hint="@string/phone_hint"
+            android:singleLine="false"
+            android:textSize="14sp"
+            android:visibility="visible" />
 
-    <TextView
-        android:id="@+id/notesText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="152dp"
-        android:text="@string/note"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.124"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/emailImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_alignTop="@id/emailEditText"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="32dp"
+            android:src="@drawable/mail"
+            android:textSize="24sp" />
 
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp" />
-</android.support.constraint.ConstraintLayout>
+        <EditText
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/phoneEditText"
+            android:layout_alignRight="@id/firstNameEditText"
+            android:layout_alignLeft="@id/firstNameEditText"
+            android:layout_marginTop="48dp"
+            android:ems="10"
+            android:fontFamily="sans-serif"
+            android:hint="@string/email_hint"
+            android:singleLine="false"
+            android:textSize="14sp"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/noteImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_alignTop="@id/noteEditText"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="32dp"
+            android:src="@drawable/notepad"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/noteEditText"
+            android:inputType="textMultiLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emailEditText"
+            android:layout_alignRight="@id/firstNameEditText"
+            android:layout_alignLeft="@id/firstNameEditText"
+            android:layout_marginTop="48dp"
+            android:ems="10"
+            android:fontFamily="sans-serif"
+            android:hint="@string/note_hint"
+            android:singleLine="false"
+            android:gravity="start"
+            android:textSize="14sp"
+            android:scrollbars="vertical"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -18,7 +18,7 @@ public class AddContact extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_contact);
 
-        Button saveContactBtn = findViewById(R.id.saveContactBtn);
+        /*Button saveContactBtn = findViewById(R.id.saveContactBtn);
         saveContactBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -33,6 +33,6 @@ public class AddContact extends AppCompatActivity {
 
 
             }
-        });
+        });*/
     }
 }

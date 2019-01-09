@@ -8,10 +8,12 @@
     <string name="no_contacts">You have no contacts to stay in touch with :)</string>
     <string name="name">Name:</string>
     <string name="address">Address:</string>
-    <string name="name_hint">Enter Contact\'s Name (Required)</string>
+    <string name="first_name_hint">First name</string>
+    <string name="last_name_hint">Last name</string>
+    <string name="phone_hint">Phone</string>
+    <string name="email_hint">Email</string>
+    <string name="note_hint">Note</string>
     <string name="address_hint">Enter Contact\'s Address</string>
-    <string name="note_hint">Enter Notes About Contact</string>
-    <string name="note">Notes:</string>
     <string name="no_name_save">You cannot save a contact without a name.</string>
     <string name="save_contact">Save</string>
 </resources>
