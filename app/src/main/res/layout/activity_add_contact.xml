@@ -9,7 +9,19 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         tools:context="com.example.philipterrien.stayintouch.AddContact">
+
+        <TextView
+            android:id="@+id/lastContacted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="Test"
+            android:textSize="30sp"
+            android:typeface="sans" />
 
         <ImageView
             android:id="@+id/userImage"
@@ -28,6 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:layout_toRightOf="@id/userImage"
+            android:layout_below="@id/lastContacted"
             android:ems="10"
             android:fontFamily="sans-serif"
             android:hint="@string/first_name_hint"
