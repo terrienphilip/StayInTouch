@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     ListView contactListView;
     ArrayList<Contact> contactList;
     Contact newContact;
+    static final int CONTACT_REQUEST = 1;
 
 
     @Override
@@ -33,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent startIntent = new Intent(getApplicationContext(), AddContact.class);
-                startActivity(startIntent);
+                startActivityForResult(startIntent, CONTACT_REQUEST);
             }
         });
     }
@@ -44,6 +46,16 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-
-
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        // Check which request we're responding to
+        if (requestCode == CONTACT_REQUEST) {
+            // Make sure the request was successful
+            if (resultCode == RESULT_OK) {
+                TextView testText = findViewById(R.id.TestTextView);
+                testText.setText(data.getStringExtra("firstNameInput"));
+            }
+        }
+    }
 }

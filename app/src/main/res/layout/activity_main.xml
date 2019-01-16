@@ -51,7 +51,14 @@
             android:textAllCaps="false"
             android:textColor="@android:color/background_dark"
             android:textSize="12sp" />
+
     </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TestTextView"
+        android:text="Test"/>
 
     <ScrollView
         android:layout_width="match_parent"
